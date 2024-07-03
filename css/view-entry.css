@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.header__image{
+    width: 50px;
+}
+/* .story{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.story .card{
+    min-height: 50% ;
+} */

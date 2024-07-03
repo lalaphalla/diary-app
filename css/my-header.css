@@ -1,0 +1,22 @@
+.my-header {
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.btn-back {
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .my-header {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

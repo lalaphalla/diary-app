@@ -1,0 +1,190 @@
+/* Show Card of Entries */
+.entry-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 25px;
+  flex-grow: 0;
+  margin-top: 18px;
+}
+
+.entry-list-all{
+  flex-grow: 1;
+}
+/* story */
+.story {
+  flex-grow: 1;
+}
+.story .card {
+  height: fit-content;
+  min-height: 400px;
+}
+.story .card:hover{
+  transform: scale(1.00);
+}
+/* entry container */
+
+.entry-container {
+  width: 90%;
+  margin: 0 auto;
+  color: black;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--primary-raidus);
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  height: 220px;
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+}
+.entry-container:hover {
+  transform: scale(1.01);
+}
+
+/* Date, Entry Buttons Container */
+.entry-head {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-light-color);
+  border-radius: var(--primary-raidus) var(--primary-raidus) 0 0;
+  padding: 10px 15px 5px 15px;
+}
+
+/* Edit Button, Delete Button */
+.entry-buttons {
+  color: black;
+  display: flex;
+  gap: 5px;
+}
+/* Entry Title and Description */
+.entry-content {
+  padding: 15px;
+  border-top: 0px;
+  height: 100%;
+}
+.entry-list-all .entry-container p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+/* Button in Entry Head */
+.entry-head button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 10px
+}
+
+/* Title */
+.entry-content h4 {
+  font-size: 1.5rem;
+  padding-bottom: 8px;
+}
+/* Description Display */
+.entry-desc {
+  white-space: pre-wrap;
+  width: 100%;
+}
+dialog{
+  width: 320px;
+  margin: auto;
+}
+.remove-popover{
+  /* margin: auto; */
+  /* width: 320px; */
+  /* position:absolute; */
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(50%, 50%);  */
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 10px;
+  box-shadow: 5px 5px 1px 1px rgba(0, 0, 0, 1);
+}
+dialog[popover]::backdrop{
+  background: rgba(0, 0, 0, 0.5);
+}
+.remove-popover button{
+  padding: 11px 27px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: var(--card-shadow);
+}
+.remove-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.btn-yes{
+  background-color: #E95252;
+}
+.btn-no{
+  background-color: #FFFFFF80;
+}
+@media only screen and (min-width: 768px) {
+  .entry-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+    flex-grow: 0;
+    margin: 20px 0;
+  }
+  /* entry container */
+  .entry-container {
+    width: 100%;
+    margin: 0px 0px;
+    color: black;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--primary-raidus);
+    cursor: pointer;
+    min-height: 200px;
+    /* height: fit-content; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 5;
+  }
+  .entry-list-all {
+    /* Give it grow 1 to push footer to the bottom of the page */
+    flex-grow: 1;
+
+    /* I want to show 2 column of the card */
+    display: grid;
+    align-content: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .entry-list-all .entry-container {
+    min-height: 220px;
+    width: 100%;
+    margin: 0 auto;
+    color: black;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--primary-raidus);
+    cursor: pointer;
+    box-shadow: var(--card-shadow);
+  }
+  /* Edit Button, Delete Button */
+.entry-buttons {
+  gap: 10px;
+}
+}
+

@@ -1,0 +1,18 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #000;
+  --primary-color-alpha: #00000080;
+  --secondary-color: white;
+  --secondary-light-color: #000;
+  --secondary-color-alpha: #ffffff80;
+  --my-radius: 50%;
+  --primary-raidus: 10px;
+  --input-raidus: 4px;
+  --card-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px;
+  --button-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px;
+}

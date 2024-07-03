@@ -1,0 +1,75 @@
+/* Home page style */
+
+/* For Mobile: */
+/* hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-image {
+  width: 90%;
+}
+.hero-content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Overview */
+.overview {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  /* hero */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-image {
+    width: 50%;
+  }
+  .hero-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .overview {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+
+  /* hero */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-image {
+    width: 50%;
+  }
+  .hero-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .overview {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

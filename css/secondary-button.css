@@ -1,0 +1,30 @@
+/*
+ * Secondary Button Styles
+ * ----------------------------------------------------------------------------
+ * Secondary button with a secondary color scheme.
+ * The button has a border radius of 20px, a box shadow, and a padding of
+ * 8px on the left and right sides, and 40px on the top and bottom.
+ * The button has a hover effect that changes the background color to
+ * var(--primary-color-alpha).
+ * The button has a disabled state that changes the background color to black.
+ */
+.secondary-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px; /* rounded corners */
+  color: black;
+  background-color: var(--secondary-color);
+  box-shadow: var(--button-shadow);
+  padding: 8px 40px;
+  font-weight: bold;
+  border: 0;
+}
+
+.secondary-button:hover {
+  background-color: var(--primary-color-alpha);
+}
+
+.secondary-button:disabled {
+  background-color: black;
+}
+
