@@ -1,18 +1,24 @@
-const elEntryCard = document.querySelector('entry-card')
+// Select the entry-card element
+const entryCard = document.querySelector('entry-card');
 
+// Retrieve the entry array from local storage or create an empty array if none exists
 const entryArr = JSON.parse(localStorage.getItem('entries')) || [];
+
+// Get the key parameter from the URL query string
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const key = urlParams.get('key')
-const {title, date, desc} = entryArr[key]
+const key = urlParams.get('key');
 
-elEntryCard.setAttribute('data-title', title);
-elEntryCard.setAttribute('data-date', date);
-elEntryCard.setAttribute('data-desc', desc);
-elEntryCard.setAttribute('data-key', key);
-elEntryCard.setAttribute('is-entry-detail', 'true');
-elEntryCard.classList.add('entry-container')
-// re-render the component to have data
-elEntryCard.connectedCallback();
-console.log(title, date, desc);
-// console.log('object');
+// Get the title, date, and description of the entry associated with the key
+const { title, date, desc } = entryArr[key];
+
+// Set the data attributes of the entry-card element with the entry information
+entryCard.setAttribute('data-title', title);
+entryCard.setAttribute('data-date', date);
+entryCard.setAttribute('data-desc', desc);
+entryCard.setAttribute('data-key', key);
+entryCard.setAttribute('is-entry-detail', 'true');
+entryCard.classList.add('entry-container');
+
+// Re-render the component to have the updated data
+entryCard.connectedCallback();

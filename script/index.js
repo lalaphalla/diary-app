@@ -1,3 +1,4 @@
+// Import all component to used in script
 import { EntryCard } from "./components/entry-card.js"
 import { EntryList } from "./components/entry-list.js"
 import { MyFooter } from "./components/my-footer.js"

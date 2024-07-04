@@ -12,9 +12,8 @@ export class EntryList extends HTMLElement {
         const isAllEntry = this.dataset.isall === 'true' //boolean is all true
         // slice(0, 3) for home 
         const allEntry = this.loadEntries()
-
         //  If there is no entry display a message
-        if (allEntry.length === 0) {
+        if (allEntry.length === 0 ) {
             this.innerHTML = `
                 <h2>Start your new Diary!</h2>
                 <img src="/assets/images/start-diary.png" al="new diary" />
@@ -75,7 +74,7 @@ export class EntryList extends HTMLElement {
      * @returns {Array} The loaded entries.
      */
     loadEntries() {
-        const entryObj = JSON.parse(localStorage.getItem('entries'))
+        const entryObj = JSON.parse(localStorage.getItem('entries')) || [];
         return entryObj
     }
 
@@ -86,13 +85,11 @@ export class EntryList extends HTMLElement {
      * @param {HTMLElement} btnYes - The "yes" button element.
      */
     handleRemoveEntry(key, popover, btnYes) {
-        console.log('object');
         popover.showModal();
         btnYes.addEventListener('click', () => {
             const entries = this.loadEntries();
             entries.splice(key, 1);
             localStorage.setItem('entries', JSON.stringify(entries));
-            console.log('hello');
             // Refresh loading
             this.connectedCallback();
         })
